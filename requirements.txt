@@ -6,3 +6,4 @@ gunicorn==19.3.0
 Markdown==2.6.1
 psycopg2==2.6
 SQLAlchemy==0.9.9
+whitenoise==1.0.6
