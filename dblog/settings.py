@@ -38,6 +38,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'django_markdown',
+    'gunicorn',
+    'dj_database_url',
+    'psycopg2',
 )
 
 MIDDLEWARE_CLASSES = (

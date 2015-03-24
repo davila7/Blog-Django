@@ -1,0 +1,8 @@
+dj-database-url==0.3.0
+Django==1.7.7
+django-markdown==0.8.4
+django-postgrespool==0.3.0
+gunicorn==19.3.0
+Markdown==2.6.1
+psycopg2==2.6
+SQLAlchemy==0.9.9
