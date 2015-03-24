@@ -4,11 +4,12 @@
 {% block content %}
 
 {% for entrada in object_list %}
-<div class="blog-post">
-    <h2 class="blog-post-title"><a href="/entrada/{{ entrada.slug }}/">{{ entrada.titulo }}</a></h2>
-    <p class="blog-post-meta">{{ entrada.created }} by <a href="#">Davila</a></p>
-    <p>{{ entrada.contenido }}</p>
-</div><!-- /.blog-post -->
+	<div class="blog-post">
+	    <h2 class="blog-post-title"><a href="/entrada/{{ entrada.slug }}/">{{ entrada.titulo }}</a></h2>
+	    <p class="blog-post-meta">{{ entrada.created }} by <a href="#">Davila</a></p>
+	    <p>{% autoescape off %}{{ entrada.contenido }}{% endautoescape %}</p>
+	    
+	</div><!-- /.blog-post -->
 {% endfor %}
 
 {% endblock %}
