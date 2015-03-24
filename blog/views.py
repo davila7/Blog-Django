@@ -4,7 +4,7 @@ from .models import Entrada
 
 class IndexView(ListView):
 	
-	template_name = 'index.html'
+	template_name = 'entrada_list.html'
 	model = Entrada
 
 class EntradaDetailView(DetailView):
