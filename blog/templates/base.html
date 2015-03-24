@@ -72,9 +72,14 @@
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
+            {% if not user.is_authenticated %}
             <h4>Login</h4>
             <a href="{% url 'social:begin' 'facebook' %}">Facebook</a><br/>
             <a href="{% url 'social:begin' 'twitter' %}">Twitter</a>
+            {% else %}
+            <h4>Bienvenido {{ user }}</h4><br/>
+            <a href="/salir/">Logout</a>
+            {% endif %}
           </div>
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
