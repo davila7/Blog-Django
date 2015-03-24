@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>Blog</h1>
-	{% for entrada in objet_list %}
+	{% for entrada in object_list %}
 	<h2><a href="/entrada/{{ entrada.slug }}/"> {{ entrada.titulo }}</a></h2>
 	<p>{{ entrada.contenido }}</p>
 	{% endfor %}
