@@ -5,6 +5,7 @@ from django_markdown.admin import MarkdownModelAdmin
 
 @admin.register(Entrada)
 class EntradaAdmin(MarkdownModelAdmin):
-	pass
+	list_display = ("titulo", "created")
+	propopulated_fields = {"slug":("titulo",)}
 
 
