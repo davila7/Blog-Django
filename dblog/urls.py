@@ -12,4 +12,5 @@ urlpatterns = patterns('',
     url(r'^markdown/', include('django_markdown.urls')),
     url(r'^$', IndexView.as_view()),
     url(r'^entrada/(?P<slug>[-\w]+)/$', EntradaDetailView.as_view()),
+    url('', include('social.apps.django_app.urls', namespace='social')),
 )

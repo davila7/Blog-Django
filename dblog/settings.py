@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'gunicorn',
     'dj_database_url',
     'psycopg2',
+    'social.apps.django_app.default',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,3 +98,22 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+
+# variables de autentificacion 
+AUTHENTICATION_BACKENDS = (
+        'social.backends.facebook.FacebookAppOAuth2',
+        'social.backends.facebook.FacebookOAuth2',
+        'social.backends.twitter.TwitterOAuth',
+        'django.contrib.auth.backends.ModelBackend',
+    )
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/'
+
+SOCIAL_AUTH_TWITTER_KEY = 'DAEAQLJla7WvSsJjvMlmXZEhT'
+SOCIAL_AUTH_TWITTER_SECRET = 'b2IPr4YO9fbYX5Eus1bSl2KhXYB5uqZx3pzoll6C7PrKe6XCHT'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1543179569281687'
+SOCIAL_AUTH_FACEBOOK_SECRET = '177b5b692b7b4f64c185c869915e495d'
+
+
