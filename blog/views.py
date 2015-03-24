@@ -13,6 +13,6 @@ class EntradaDetailView(DetailView):
 	template_name = 'entrada_detail.html'
 	model = Entrada
 
-def LogOut(request):
+def Logout(request):
 	logout(request)
 	return redirect('/')
