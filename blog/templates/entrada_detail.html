@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
+{% load django_markdown %}
+
 {% block content %}
 	<h2>{{ object.titulo }}</h2>
 	<h4 class="blog-post-meta">{{ object.created }}</h4>
-	<p >{% autoescape off %}{{ entrada.contenido }}{% endautoescape %}</p>
+	<p>{{ entrada.contenido|markdown }}</p>
+	Tags: <span class="label label-success">{{ entrada.tags.all|join:", " }}</span>
 {% endblock %}

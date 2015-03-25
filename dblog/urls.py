@@ -10,7 +10,7 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^markdown/', include('django_markdown.urls')),
-    url(r'^$', IndexView.as_view()),
+    url(r'^$', IndexView.as_view(), name="index"),
     url(r'^entrada/(?P<slug>[-\w]+)/$', EntradaDetailView.as_view()),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url(r'^salir/$', 'blog.views.Logout'),

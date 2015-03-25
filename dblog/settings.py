@@ -129,5 +129,6 @@ SOCIAL_AUTH_GITHUB_SCOPE = ['user:email']
 #GOOGLE
 GOOGLE_OAUTH2_CLIENT_ID = '959593380702-e6t938qmdnem6mi9uc6d2dnit00ll5g6.apps.googleusercontent.com'
 GOOGLE_OAUTH2_CLIENT_SECRET = 'Cla4QCwLauybLKl2nm77udKz'
+GOOGLE_WHITE_LISTED_DOMAINS = ['mygoogleappsdomain.com']
 
 

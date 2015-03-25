@@ -2,7 +2,15 @@ from django.db import models
 from django.template.defaultfilters import slugify
 from datetime import datetime 
 
-class EntryQuerySet(models.QuerySet):
+
+class Tag(models.Model):
+	slug = models.SlugField(max_length=200, unique=True)
+
+	def __unicode__(self):
+		return self.slug
+
+
+class EntradaQuerySet(models.QuerySet):
 	def published(self):
 		return self.filter(publish=True)
 
@@ -14,8 +22,9 @@ class Entrada(models.Model):
 	publish = models.BooleanField(default=True)
 	created = models.DateTimeField(auto_now_add=True, blank=True, null=True, default=datetime.now)
 	modified = models.DateTimeField(auto_now=True, blank=True, null=True, default=datetime.now)
+	tags = models.ManyToManyField(Tag)
 
-	objects = EntryQuerySet.as_manager()
+	objects = EntradaQuerySet.as_manager()
 
 	class Meta:
 		verbose_name = "Entrada"

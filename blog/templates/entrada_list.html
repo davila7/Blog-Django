@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load django_markdown %}
 
 
 {% block content %}
@@ -7,9 +8,10 @@
 	<div class="blog-post">
 	    <h2 class="blog-post-title"><a href="/entrada/{{ entrada.slug }}/">{{ entrada.titulo }}</a></h2>
 	    <p class="blog-post-meta">{{ entrada.created }} by <a href="#">Davila</a></p>
-	    <p>{% autoescape off %}{{entrada.contenido|striptags|slice:":200"}}{% endautoescape %}... <a href="/entrada/{{ entrada.slug }}/">Ver Más</a></p>
-	    
-	</div><!-- /.blog-post -->
+	    <p>{{entrada.contenido|markdown|slice:":200"}}... <a href="/entrada/{{ entrada.slug }}/">Ver Más</a></p>
+	    Tags: <span class="label label-success">{{ entrada.tags.all|join:", " }}</span>
+	     	 
+	</div>
 {% endfor %}
 
 {% endblock %}
