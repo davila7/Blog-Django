@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 	<h2>{{ object.titulo }}</h2>
-	<p>{% autoescape off %}{{ entrada.contenido }}{% endautoescape %}</p>
+	<h4 class="blog-post-meta">{{ object.created }}</h4>
+	<p >{% autoescape off %}{{ entrada.contenido }}{% endautoescape %}</p>
 {% endblock %}
