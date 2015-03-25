@@ -106,6 +106,10 @@ AUTHENTICATION_BACKENDS = (
         'social.backends.facebook.FacebookOAuth2',
         'social.backends.twitter.TwitterOAuth',
         'social.backends.github.GithubOAuth2',
+        'social.backends.google.GoogleOAuth2',
+        'social_auth.backends.google.GoogleOAuth2Backend',
+        'social.backends.google.GoogleOAuth',
+        'social.backends.google.GoogleOpenId',
         'django.contrib.auth.backends.ModelBackend',
     )
 
@@ -123,4 +127,9 @@ SOCIAL_AUTH_FACEBOOK_SECRET = '177b5b692b7b4f64c185c869915e495d'
 SOCIAL_AUTH_GITHUB_KEY = '80da78cbd76b151d5c28'
 SOCIAL_AUTH_GITHUB_SECRET = '90ae70435330e5ac97bff633540083c64c7ea1cb'
 SOCIAL_AUTH_GITHUB_SCOPE = ['user:email']
+
+#GOOGLE
+GOOGLE_OAUTH2_CLIENT_ID = '959593380702-e6t938qmdnem6mi9uc6d2dnit00ll5g6.apps.googleusercontent.com'
+GOOGLE_OAUTH2_CLIENT_SECRET = 'Cla4QCwLauybLKl2nm77udKz'
+
 
